@@ -1,0 +1,14 @@
+{
+  "name": "acme/custom-theme",
+  "authors": [
+      {
+          "name": "Valentin Moreau",
+          "email": "contact@valentin-moreau.com"
+      }
+  ],
+  "extra": {
+      "sylius-theme": {
+          "title": "Custom Theme"
+      }
+  }
+}
