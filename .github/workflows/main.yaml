@@ -21,4 +21,6 @@ jobs:
         run:
           sshpass -e ssh -A -o stricthostkeychecking=no ${{ secrets.APP_USER }}@${{ secrets.APP_HOST }}
           "cd sites/sylius-test.valentin-moreau.com &&
-          git pull"
+          git pull &&
+          php bin/console sylius:theme:assets:install &&
+          php bin/console cache:clear --env=prod"
