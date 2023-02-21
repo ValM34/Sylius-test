@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace App\Form\Extension;
+namespace App\Form;
 
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
