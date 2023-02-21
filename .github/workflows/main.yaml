@@ -25,5 +25,6 @@ jobs:
           php bin/console doctrine:migrations:migrate --no-interaction &&
           php bin/console sylius:theme:assets:install &&
           nvm use 16.19.1 &&
+          echo 'nvm use 16.19.1 - DONE' &&
           npm run build:prod &&
           php bin/console cache:clear --env=prod"
