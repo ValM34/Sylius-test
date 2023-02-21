@@ -13,4 +13,16 @@ use Sylius\Component\Core\Model\Customer as BaseCustomer;
  */
 class Customer extends BaseCustomer
 {
+  /** @ORM\Column(type="string", nullable=true) */
+  private $secondary_phone_number;
+
+  public function getSecondaryPhoneNumber(): ?string
+  {
+      return $this->secondary_phone_number;
+  }
+
+  public function setSecondaryPhoneNumber(string $secondary_phone_number): void
+  {
+      $this->secondary_phone_number = $secondary_phone_number;
+  }
 }

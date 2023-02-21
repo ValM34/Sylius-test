@@ -23,4 +23,5 @@ jobs:
           "cd sites/sylius-test.valentin-moreau.com &&
           git pull &&
           php bin/console sylius:theme:assets:install &&
+          npm run build:prod &&
           php bin/console cache:clear --env=prod"
