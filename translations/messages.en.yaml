@@ -2,7 +2,7 @@ sylius:
     homepage:
         banner_button: 'Check out the new collection'
         my_super_text: 'my awesome text!'
-        my_new_block: 'My new block'
+        my_new_block: 'My new block HOTFIX'
     form:
         customer:
             secondary_phone_number: 'Secondary phone number'
