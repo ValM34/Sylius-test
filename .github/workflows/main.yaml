@@ -22,6 +22,8 @@ jobs:
           sshpass -e ssh -A -o stricthostkeychecking=no ${{ secrets.APP_USER }}@${{ secrets.APP_HOST }}
           "cd sites/sylius-test.valentin-moreau.com &&
           git pull &&
+          composer install &&
+          composer update &&
           php bin/console doctrine:migrations:migrate --no-interaction &&
           php bin/console sylius:theme:assets:install &&
           echo 'Load the nvm variable to this shell' &&
