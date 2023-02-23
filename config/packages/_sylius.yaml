@@ -241,18 +241,6 @@ sylius_user:
             user:
                 classes:
                     model: App\Entity\User\UserOAuth
-sylius_resource:
-    resources:
-        app.blog_post:
-            driver: doctrine/orm
-            classes:
-                model: App\Entity\Blog\BlogPost
-                repository: App\Repository\Blog\BlogPostRepository
-        app.blog_comment:
-            driver: doctrine/orm
-            classes:
-                model: App\Entity\Blog\BlogComment
-                repository: App\Repository\Blog\BlogCommentRepository
 
 sylius_shop:
     product_grid:
