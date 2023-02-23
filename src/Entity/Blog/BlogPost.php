@@ -65,7 +65,9 @@ class BlogPost implements ResourceInterface
 
   public function setCustomer($customer): self
   {
-    return $this->customer = $customer;
+    $this->customer = $customer;
+
+    return $this;
   }
 
   public function getTitle(): ?string
@@ -73,9 +75,11 @@ class BlogPost implements ResourceInterface
     return $this->title;
   }
 
-  public function setTitle($title): self
+  public function setTitle(string $title): self
   {
-    return $this->title = $title;
+    $this->title = $title;
+
+    return $this;
   }
 
   public function getChapo(): ?string
@@ -85,7 +89,9 @@ class BlogPost implements ResourceInterface
 
   public function setChapo($chapo): self
   {
-    return $this->chapo = $chapo;
+    $this->chapo = $chapo;
+
+    return $this;
   }
 
   public function getContent(): ?string
@@ -95,7 +101,9 @@ class BlogPost implements ResourceInterface
 
   public function setContent($content): self
   {
-    return $this->content = $content;
+    $this->content = $content;
+
+    return $this;
   }
 
   public function getImgSrc(): ?string
@@ -105,7 +113,9 @@ class BlogPost implements ResourceInterface
 
   public function setImgSrc($img_src): self
   {
-    return $this->img_src = $img_src;
+    $this->img_src = $img_src;
+
+    return $this;
   }
 
   public function getPublished(): ?bool
@@ -115,6 +125,8 @@ class BlogPost implements ResourceInterface
 
   public function setPublished($published): self
   {
-    return $this->published = $published;
+    $this->published = $published;
+
+    return $this;
   }
 }

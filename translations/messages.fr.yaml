@@ -6,3 +6,6 @@ sylius:
     form:
         address:
             secondary_phone_number: 'deuxième numéro'
+blog:
+    post_creation_page:
+        title: "Création d'un article de blog"

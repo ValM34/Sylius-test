@@ -5,6 +5,8 @@ namespace App\Repository\Blog;
 use App\Entity\Blog\BlogComment;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Sylius\Bundle\ResourceBundle\Doctrine\ORM\EntityRepository;
+use Sylius\Component\Resource\Repository\RepositoryInterface;
 
 /**
  * @extends ServiceEntityRepository<BlogComment>
@@ -14,12 +16,12 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method BlogComment[]    findAll()
  * @method BlogComment[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class BlogCommentRepository extends ServiceEntityRepository
+class BlogCommentRepository extends EntityRepository implements RepositoryInterface
 {
-    public function __construct(ManagerRegistry $registry)
+    /*public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, BlogComment::class);
-    }
+    }*/
 
     public function save(BlogComment $entity, bool $flush = false): void
     {
@@ -30,14 +32,14 @@ class BlogCommentRepository extends ServiceEntityRepository
         }
     }
 
-    public function remove(BlogComment $entity, bool $flush = false): void
+    /*public function remove(BlogComment $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);
 
         if ($flush) {
             $this->getEntityManager()->flush();
         }
-    }
+    }*/
 
 //    /**
 //     * @return BlogComment[] Returns an array of BlogComment objects

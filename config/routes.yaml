@@ -1,2 +1,7 @@
 sylius_paypal_webhook:
     resource: "@SyliusPayPalPlugin/Resources/config/webhook_routing.yaml"
+app_blog_post:
+    path: /{_locale}/blog/post
+    controller: App\Controller\BlogPostController::index
+    requirements:
+        _locale: "%locales%"

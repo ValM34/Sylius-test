@@ -6,3 +6,6 @@ sylius:
     form:
         customer:
             secondary_phone_number: 'Secondary phone number'
+blog:
+    post_creation_page:
+        title: 'Création blog post'

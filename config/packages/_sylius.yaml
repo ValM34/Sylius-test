@@ -253,6 +253,7 @@ sylius_resource:
             classes:
                 model: App\Entity\Blog\BlogComment
                 repository: App\Repository\Blog\BlogCommentRepository
+                controller: App\Controller\BlogPostController
 
 sylius_shop:
     product_grid:

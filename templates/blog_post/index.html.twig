@@ -1,0 +1,9 @@
+{% extends '@SyliusShop/layout.html.twig' %}
+
+{% block content %}
+  <h1>{{ 'blog.post_creation_page.title'|trans }}</h1>
+  {{ form_start(blogPostForm) }}
+  {{ form_widget(blogPostForm) }}
+    <button type="submit">Valider</button>
+  {{ form_end(blogPostForm) }}
+{% endblock %}

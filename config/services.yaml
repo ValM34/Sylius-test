@@ -2,6 +2,7 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en_US
+    locales: "en_US|fr_FR"
 
 services:
     # Default configuration for services in *this* file
@@ -24,6 +25,8 @@ services:
 
     # Makes classes in src/ available to be used as services;
     # this creates a service per class whose id is the fully-qualified class name
+    App\Entity\Blog\BlogPost:
+        class: App\Entity\Blog\BlogPost
     App\:
         resource: '../src/*'
         exclude: '../src/{Entity,Migrations,Tests,Kernel.php}'

@@ -5,6 +5,8 @@ namespace App\Repository\Blog;
 use App\Entity\Blog\BlogPost;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Sylius\Bundle\ResourceBundle\Doctrine\ORM\EntityRepository;
+use Sylius\Component\Resource\Repository\RepositoryInterface;
 
 /**
  * @extends ServiceEntityRepository<BlogPost>
@@ -14,12 +16,12 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method BlogPost[]    findAll()
  * @method BlogPost[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class BlogPostRepository extends ServiceEntityRepository
+class BlogPostRepository extends EntityRepository implements RepositoryInterface
 {
-    public function __construct(ManagerRegistry $registry)
+    /*public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, BlogPost::class);
-    }
+    }*/
 
     public function save(BlogPost $entity, bool $flush = false): void
     {
@@ -30,14 +32,14 @@ class BlogPostRepository extends ServiceEntityRepository
         }
     }
 
-    public function remove(BlogPost $entity, bool $flush = false): void
+    /*public function remove(BlogPost $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);
 
         if ($flush) {
             $this->getEntityManager()->flush();
         }
-    }
+    }*/
 
 //    /**
 //     * @return BlogPost[] Returns an array of BlogPost objects
